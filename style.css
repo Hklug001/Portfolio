@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    background: #ECF4FF;
+    background: rgba(51, 52, 57, 1);
     margin: 4rem;
     border-radius: 1.25rem;
     box-shadow: 6px 6px 6px #0E1D2F;
@@ -19,6 +19,7 @@ body{
 }
 
 .profile{
+    color: #F7F7F7;
     display: flex;
     justify-content:space-evenly;
 }
@@ -26,9 +27,11 @@ body{
 .profile-information{
     display: flex;
     align-items: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.profile-photo{
+#avatar{
     border-radius: 25rem;
     max-height: 10rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -38,20 +41,45 @@ body{
     margin-left:1.25rem;
 }
 
-.information-description h1{
+#myName{
     font-weight: 700;
-    font-size: 2.25rem;
+    font-size: 2.6rem;
 }
 
-.description-h3{
+#description{
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .profile-links{
     font-weight: 700;
     font-size: 1.5rem;
     margin-top: 2.625rem;
+    list-style: none;
+}
+
+.list-item-links{
+    font-size: 2.25rem;
+    font-weight: 25rem;
+    line-height: 3rem;
+    margin: 1.5rem;
+}
+
+.list-item-links a{
+    color: #1C1C1C;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+}
+
+.icon{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.social-media{
+    color: #F7F7F7;
 }
 
 .projects{
@@ -60,8 +88,8 @@ body{
     border-radius: 1.25rem;
     margin-top: 2rem;
     padding: 2rem;
-    display: flex;
 
+    display: flex;
     flex-direction: column;
 }
 
@@ -69,22 +97,64 @@ body{
     list-style: none;
     font-weight: 700;
     font-size: 2.25rem;
+    margin-left: auto;
+    margin-right: auto;
     color: #1C1C1C;
 }
 
 .list-item{
+    background: #1C1C1C;
+    box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+    padding: 2rem;
+    border-radius: 1.25rem;
     font-size: 2.25rem;
     font-weight: 25rem;
     line-height: 3rem;
-}
-
-.list-item a{
-    color: #1C1C1C;
-    font-size: 1.5rem;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .list-item p{
     color: #1C1C1C;
     list-style-type: none;
+
 }
 
+.project-images{
+    width: 45rem;
+    height: 25rem; 
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.project-theme p{
+    display: flex;
+    justify-content: center;
+    color: #F7F7F7;
+}
+
+.project-theme img{
+    box-shadow: 2px 2px 4px rgb(36, 35, 35);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button{
+    box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+    background: rgb(204, 199, 199);
+    padding: .8rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    max-width: 700px;
+    min-width: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+}
