@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
 body{
@@ -39,15 +39,16 @@ body{
 
 .information-description{
     margin-left:1.25rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 #myName{
-    font-weight: 700;
+    font-weight: bold;
     font-size: 2.6rem;
 }
 
 #description{
-    font-weight: 400;
+    font-weight: normal;
     font-size: 1.6rem;
 }
 
@@ -60,7 +61,7 @@ body{
 
 .list-item-links{
     font-size: 2.25rem;
-    font-weight: 25rem;
+    font-weight: bold;
     line-height: 3rem;
     margin: 1.5rem;
 }
@@ -87,35 +88,45 @@ body{
 }
 
 .projects{
+    font-weight: 700;
+    font-size: 2.25rem;
     background: linear-gradient(230.65deg, #499CFE 27.49%, #9CC8FC 83.19%);
     box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
     border-radius: 1.25rem;
     margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 2rem;
 
     display: flex;
     flex-direction: column;
 }
 
-.projects-list{
-    list-style: none;
-    font-weight: 700;
-    font-size: 2.25rem;
+.projects h1{
+    margin-left: 5rem;
+    margin-bottom: 0rem;
+    font-weight: bold;
+}
 
-    color: #1C1C1C;
+.projects-list{
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
     display: flex;
     flex-direction: column;
+    padding: 40px;
+    margin-top: 0rem;
 }
 
 .list-item{
-    background: #1C1C1C;
+    
+    background: rgb(38, 38, 43);
     box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
     padding: 2rem;
     border-radius: 1.25rem;
     font-size: 2.25rem;
-    font-weight: 25rem;
     line-height: 3rem;
-    margin-top: 5rem;
+    margin-top: 4.2rem;
     margin-left: auto;
     margin-right: auto;
 }
