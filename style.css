@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+*{
+    box-sizing: border-box;
+}
 
 body{
     background-image:url("https://www.teahub.io/photos/full/135-1353101_4k-phone-wallpapers-space.jpg") ;
     background-size: cover;
-    background-position: center top;
     background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
 }
 
 .container{
     background: rgba(51, 52, 57, 1);
-    margin: 4rem;
+    margin: 4.8rem;
     border-radius: 1.25rem;
     box-shadow: 6px 6px 6px #0E1D2F;
     color: #1C1C1C;
@@ -22,13 +24,12 @@ body{
     color: #F7F7F7;
     display: flex;
     justify-content:space-evenly;
+    gap: 1.8rem;
 }
 
 .profile-information{
     display: flex;
     align-items: center;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 #avatar{
@@ -39,7 +40,6 @@ body{
 
 .information-description{
     margin-left:1.25rem;
-    font-family: 'Roboto', sans-serif;
 }
 
 #myName{
@@ -53,10 +53,16 @@ body{
 }
 
 .profile-links{
+    color: #1C1C1C;
+    padding-left: 0rem;
     font-weight: 700;
     font-size: 1.5rem;
     margin-top: 2.625rem;
     list-style: none;
+    background: #f3efef;
+    box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+    border-radius: 1rem;
+    padding: 0.5rem;
 }
 
 .list-item-links{
@@ -64,11 +70,12 @@ body{
     font-weight: bold;
     line-height: 3rem;
     margin: 1.5rem;
+    text-shadow: 0.2px 0.2px 0.4px rgba(37, 37, 37, 0.42);
 }
 
 .list-item-links a{
     color: #1C1C1C;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-decoration: none;
     display: flex;
     gap: 10px;
@@ -79,12 +86,8 @@ body{
 }
 
 .icon{
-    width: 2.8rem;
-    height: 2.8rem;
-}
-
-.social-media{
-    color: #F7F7F7;
+    width: 2.6rem;
+    height: 2.6rem;
 }
 
 .projects{
