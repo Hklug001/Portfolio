@@ -5,92 +5,147 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&family=Merriweather:wght@400;700&family=Poppins:wght@100;400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <header class="profile">
-            <section class="profile-information">
-                <img src="" id="avatar">
-                <div class="information-description">
-                    <h1 id="myName"></h1>
-                    <h3 id="description"></h3>
-                </div>
-            </section>
-            <nav>
-                <ul class="profile-links">
-                    <li class="list-item-links">
-                        <a href="" target="_blank" id="githubLink">
-                            <img src="images/GitHub.png" alt="GitHub icon" class="icon">
-                            <span class="social-media">GitHub</span>
-                        </a>
-                    </li>
-                    <li class="list-item-links">
-                        <a href="https://www.linkedin.com/in/henrique-klug/" target="_blank">
-                            <img src="images/Linkedin.svg" alt="Linkedin icon" class="icon">
-                            <span class="social-media">Linkedin</span>
-                        </a>
-                    </li>
-                    <li class="list-item-links">
-                        <a href="mailto:henriqueklug@gmail.com" target="_blank">
-                            <img src="images/gmail.svg" alt="Gmail icon" class="icon">
-                            <span class="social-media">E-mail</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+
+    <aside>
+
+        <header id="profile" class="card">
+            <img src="" alt="Hklug's avatar" title="Hklug's avatar" id="avatar">
+            <div>
+                <h2 id="name">Henrique Klug</h2>
+                <p id="description"></p>
+            </div>
         </header>
-        <main class="projects">
-            <h1>Projects:</h1>
-            <ul class="projects-list">
-                <li class="list-item">
-                    <div class="project-theme">
-                        <p>Virtual Card:</p>
-                        <img src="images/nlw-card.jpeg" alt="" class="project-images">
-                    </div>
-                    <div class="project-links">
-                        <a href="https://hklug001.github.io/doWhile-virtual-card/" target="_blank">
-                            <button>Page</button>
-                        </a>
-                        <a href="https://github.com/Hklug001/doWhile-virtual-card" target="_blank">
-                            <button>Repository</button>
-                        </a>
-                    </div>
+
+        <section id="about" class="card">
+            <ul id="about-list">
+                <li>
+                    <a href="https://www.google.com/maps/place/Curitiba,+PR">
+                        <img src="assets/dark-theme/map-pin.svg" alt=""><small>Curitiba/PR</small>
+                    </a>
                 </li>
-                <li class="list-item">
-                    <div class="project-theme">
-                        <p>Card Game:</p>
-                        <img src="images/super-trunfo.jpeg" alt="" class="project-images">
-                    </div>
-                    <div class="project-links">
-                        <a href="https://hklug001.github.io/super-trunfo/" target="_blank">
-                            <button>Page</button>
-                        </a>
-                        <a href="https://github.com/Hklug001/super-trunfo" target="_blank">
-                            <button>Repository</button>
-                        </a>
-                    </div>
+                <li>
+                    <a href="https://portal.utfpr.edu.br/cursos/graduacao/bacharelado/sistemas-de-informacao">
+                        <img src="assets/dark-theme/briefcase.svg" alt=""><small>Estudante UTFPR</small>
+                    </a>
                 </li>
-                <li class="list-item">
-                    <div class="project-theme">
-                        <p>Movie Wishlist:</p>
-                        <img src="images/movie-wishlist.jpeg" alt="" class="project-images">
-                    </div>
-                    <div class="project-links">
-                        <a href="https://hklug001.github.io/movies-wishlist/" target="_blank">
-                            <button>Page</button>
-                        </a>
-                        <a href="https://github.com/Hklug001/movies-wishlist" target="_blank">
-                            <button>Repository</button>
-                        </a>
-                    </div>
+                <li>
+                    <a href="https://www.linkedin.com/in/henrique-klug">
+                        <img src="assets/dark-theme/linkedin.svg" alt=""><small>henrique-klug</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Hklug001">
+                        <img src="assets/dark-theme/github.svg" alt=""><small>Hklug001</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/KlugHenrique">
+                        <img src="assets/dark-theme/twitter.svg" alt=""><small>Hklug001</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:henriqueklug@gmail.com">
+                        <img src="assets/dark-theme/mail.svg" alt=""><small>henriqueklug@gmail.com</small>
+                    </a>
                 </li>
             </ul>
-        </main>
-    </div>
-    <script src="main.js"></script>
+        </section>
+
+        <section id="stack" class="card">
+            <h3>Tecnologias</h3>
+            <table id="stack-table">
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>CSS</td>
+                        <td>JS</td>
+                    </tr>
+                    <tr>
+                        <td>NODE.JS</td>
+                        <td>SQL</td>
+                        <td>GIT</td>
+                    </tr>
+                    <tr>
+                        <td>GITHUB</td>
+                        <td>VSCODE</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section id="experience" class="card">
+            <h3>Experiências</h3>
+            <ul class="ex-ed-list">
+                <li>
+                    <h4 id="title">GERM</h4>
+                    <p id="date">2021/abr - 2021/set</p>
+                    <p id="field">Programador</p>
+                </li>
+            </ul>
+
+        </section>
+
+        <section id="education" class="card">
+            <h3>Educação</h3>
+            <ul class="ex-ed-list">
+                <li>
+                    <h4 id="title">UTFPR</h4>
+                    <p id="date">2021/set - Atualmente</p>
+                    <p id="field">Sistemas de Informação</p>
+                </li>
+                <li>
+                    <h4 id="title">Rocketseat</h4>
+                    <p id="date">2021/set - 2022/jan</p>
+                    <p id="field">Discover</p>
+                </li>
+            </ul>
+
+        </section>
+
+    </aside>
+
+    <main>
+
+        <section id="projects-section">
+            <header class="card">
+                <h3>My Projects</h3>
+                <a href="https://github.com/Hklug001" target="_blank">Veja Todos</a>
+            </header>
+            <div id="projects">
+                <div id="dev-finances" class="card">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="posts-section">
+            <header class="card">
+                <h3>Recent Posts</h3>
+            </header>
+            <div id="posts" class="card">
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Feito com 💜 por HKlug</p>
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-# Portfolio
-My web developer portfolio
+My professional portfolio
 
-You can access it here: https://hklug001.github.io/Portfolio/
+You can access it <a href="https://hklug001.github.io/Portfolio/">here</a>
