@@ -2,6 +2,7 @@ const userNames = {
     github: "Hklug001",
     linkedin: "henrique-klug",
     twitter: "KlugHenrique",
+    email: 'henriqueklug@gmail.com',
 }
 
 const gitHubApi = {
@@ -50,7 +51,7 @@ const gitHubApi = {
                                             <p class="language">${repos.language}</p>
                                         </div>
                                     </div>
-                                </a>
+                                
                             </section>`
                     }
                 });
@@ -62,6 +63,7 @@ const gitHubApi = {
 gitHubLogin.textContent = userNames.github;
 linkedinLogin.textContent = userNames.linkedin;
 twitterLogin.textContent = userNames.twitter;
+mailLogin.textContent = userNames.email;
 
 gitHubApi.setUser();
 gitHubApi.setRepos();
