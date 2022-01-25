@@ -118,10 +118,10 @@ GitHubApi.setUser();
 GitHubApi.setRepos();
 
 (function () {
-    if (localStorage.getItem('theme') === 'light') {
-        Theme.setLightTheme();
-    } else {
+    if (localStorage.getItem('theme') === 'dark') {
         Theme.setDarkTheme();
-        Theme.storeTheme('dark');
+    } else {
+        Theme.setLightTheme();
+        Theme.storeTheme('light');
     }
 })();
