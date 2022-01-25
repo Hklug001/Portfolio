@@ -15,7 +15,15 @@
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 
-<body>
+<body id="body">
+
+    <header id="main-header">
+        <h1 class="sr-only">Portfólio Henrique Klug</h1>
+        <span>Theme:</span>
+        <button onclick="Theme.toggleTheme()" id="themeButton">
+            <img src="assets/dark-theme/theme.svg" alt="" class="img">
+        </button>
+    </header>
 
     <aside>
 
@@ -31,32 +39,32 @@
             <ul id="about-list">
                 <li>
                     <a href="https://www.google.com/maps/place/Curitiba,+PR">
-                        <img src="assets/dark-theme/map-pin.svg" alt=""><small id="myLocation"></small>
+                        <img src="assets/dark-theme/map-pin.svg" alt="" class="img"><small id="myLocation"></small>
                     </a>
                 </li>
                 <li>
                     <a href="https://portal.utfpr.edu.br/cursos/graduacao/bacharelado/sistemas-de-informacao">
-                        <img src="assets/dark-theme/briefcase.svg" alt=""><small>Estudante UTFPR</small>
+                        <img src="assets/dark-theme/briefcase.svg" alt="" class="img"><small>Estudante UTFPR</small>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/henrique-klug">
-                        <img src="assets/dark-theme/linkedin.svg" alt=""><small id="linkedinLogin"></small>
+                        <img src="assets/dark-theme/linkedin.svg" alt="" class="img"><small id="linkedinLogin"></small>
                     </a>
                 </li>
                 <li>
                     <a href="" id="gitHubUrl">
-                        <img src="assets/dark-theme/github.svg" alt=""><small id="gitHubLogin"></small>
+                        <img src="assets/dark-theme/github.svg" alt="" class="img"><small id="gitHubLogin"></small>
                     </a>
                 </li>
                 <li>
                     <a href="https://twitter.com/KlugHenrique">
-                        <img src="assets/dark-theme/twitter.svg" alt=""><small id="twitterLogin"></small>
+                        <img src="assets/dark-theme/twitter.svg" alt="" class="img"><small id="twitterLogin"></small>
                     </a>
                 </li>
                 <li>
                     <a href="mailto:henriqueklug@gmail.com">
-                        <img src="assets/dark-theme/mail.svg" alt=""><small id="mailLogin"></small>
+                        <img src="assets/dark-theme/mail.svg" alt="" class="img"><small id="mailLogin"></small>
                     </a>
                 </li>
             </ul>
@@ -79,6 +87,7 @@
                     <tr>
                         <td>GITHUB</td>
                         <td>VSCODE</td>
+                        <td>REACT</td>
                     </tr>
                 </tbody>
             </table>
@@ -119,7 +128,7 @@
     <main>
 
         <section id="projects-section">
-            <header class="card">
+            <header class="card" id="projects-header">
                 <h3>My Projects</h3>
                 <a href="https://github.com/Hklug001?tab=repositories" target="_blank">Veja Todos</a>
             </header>
@@ -142,6 +151,8 @@
     <footer>
         <p>Made with 💙 by Hklug</p>
     </footer>
+
+    <style id="style"></style>
 
     <script src="script.js"></script>
 
