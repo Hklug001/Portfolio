@@ -27,11 +27,11 @@ const GitHubApi = {
                 data.forEach(repos => {
                     if (repos.private === false && repos.name != userNames.github) {
                         document.querySelector('#projects-display').innerHTML +=
-
-                            `<section class="card project">
-                                <a href="${repos.homepage}" target="_blank">
+                            `
+                            <a href="${repos.homepage}" target="_blank">
+                                <section class="card project">
                                     <header class="project-title">
-                                        <img src="assets/dark-theme/folder.svg" alt="" class="img">
+                                        <img src="assets/dark-theme/folder.svg" alt="project icon" class="img">
                                         <h4>${repos.name}</h4>
                                     </header>
                                     <p class="project-description">${repos.description}</p>
@@ -51,8 +51,9 @@ const GitHubApi = {
                                             <p class="language">${repos.language}</p>
                                         </div>
                                     </div>
-                                
-                            </section>`
+                                </section>
+                            </a>
+                            `
                     }
                 });
             });

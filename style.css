@@ -10,14 +10,13 @@ body{
     background-color: var(--body-bg-color);
     color: var(--text-color);
     font-family: 'Merriweather sans', sans-serif;
-    padding: 0 0.625rem 0.625rem 0.625rem;
+    padding: 0.625rem;
 
     display: grid;
     grid-template-areas:
-    'header header'
     'aside main'
     'footer footer';
-    grid-template-rows: 50px 1fr 40px;
+    grid-template-rows: 1fr 40px;
     grid-template-columns: 1fr 3fr;
 }
 
@@ -58,24 +57,17 @@ h3{
     font-size: 1.25rem;
 }
 
-/*----------------------HEADER---------------------*/
-
-#main-header{
-    grid-area: header;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-
-    padding-left: 2rem;
-}
-
-#main-header button{
+#themeButton{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    
     background: var(--bt-bg-color);
+    cursor: pointer;
+    
+    position: absolute;
+    top: 3.125rem;
+    left: 3.4rem;
 
     border: 0;
     border-radius: 5rem;
@@ -92,7 +84,7 @@ aside{
 /*Profile---------------------*/
 
 header#profile{
-    margin-top: 0;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -204,7 +196,6 @@ main{
 }
 
 #projects-header{
-    margin-top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
