@@ -160,8 +160,6 @@ function init() {
     GitHubApi.setUser();
     GitHubApi.setRepos();
 
-
-
     Sidebar.setSidebarStyle();
 };
 

@@ -296,7 +296,7 @@ footer{
     }
     
     .card{
-        padding: 1.875rem;
+        padding: 1rem;
         margin: 1rem;
         margin-bottom: 1.875rem;
     }
@@ -327,15 +327,20 @@ footer{
 
     aside.toggle{
         overflow-y: scroll;
-        width: 70vw;
+        width: 75vw;
         height: 100%;
     }
 
     #about{
-        padding: 1.875rem;
+        padding: 1rem;
+    }
+
+    #experience{
+        padding: 1rem;
     }
 
     #education{
+        padding: 1rem;
         margin-bottom: 1.875rem;
     }
 
