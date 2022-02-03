@@ -282,45 +282,58 @@ footer{
 
 
     body{
+        padding: 0;
         display: grid;
         grid-template-areas:
-        'main'
+        'aside main'
         'footer';
-        grid-template-rows: 1fr 40px;
-        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1rem;
+        grid-template-columns: 3rem 1fr;
     }
-
-    aside{
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;   
+    
+    .card{
+        padding: 1.875rem;
+        margin: 1rem;
+        margin-bottom: 1.875rem;
     }
-
-    main{
-        
-    }
-
+    
     #projects-display{
         display: grid;
         grid-template-columns: 0.5fr 0.5fr;
         grid-auto-rows: 11.625rem;
-        gap: 1.875rem;
-        padding: 0 1.875rem;
+        gap: 1.325rem;
+        padding: 0 1.325rem;
     }
+
+    .project{
+        margin: 0;
+    }
+    aside{
+        background-color: var(--side-bar-color);
+    }
+
+    aside div{
+        position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+    }
+
+
+
 }
 
 @media (max-width: 610px){
     #projects-display{
         display: grid;
-        grid-template-columns: 1fr  ;
+        grid-template-columns: 1fr;
         grid-auto-rows: 11.625rem;
-        gap: 1.875rem;
-        padding: 0 1.875rem;
+        gap: 1rem;
+        padding: 0 1rem;
     }
 }

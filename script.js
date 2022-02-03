@@ -68,6 +68,7 @@ const Theme = {
             --bg-cards: #dee4e7;
             --bg-techs: #14B5C0;
             --bt-bg-color: #302F3D;
+            --side-bar-color: rgba(24, 194, 156, 1);
          }`,
 
     darkTheme: `
