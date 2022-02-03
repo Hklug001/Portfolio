@@ -33,6 +33,24 @@ body{
     border-width: 0;
 }
 
+#themeButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: var(--bt-bg-color);
+    cursor: pointer;
+    
+    position: absolute;
+    top: 0.625rem;
+    left: 0.875rem;
+
+    border: 0;
+    border-radius: 5rem;
+    width: 4rem;
+    height: 1.625rem;
+}
+
 .card{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     padding: 1.875rem;
@@ -58,24 +76,6 @@ h3{
     font-size: 1.25rem;
 }
 
-#themeButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    background: var(--bt-bg-color);
-    cursor: pointer;
-    
-    position: absolute;
-    top: 3.125rem;
-    left: 3.4rem;
-
-    border: 0;
-    border-radius: 5rem;
-    width: 4rem;
-    height: 1.625rem;
-}
-
 /*----------------------ASIDE---------------------*/
 
 aside{
@@ -85,6 +85,7 @@ aside{
 /*Profile---------------------*/
 
 header#profile{
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -274,7 +275,10 @@ main{
 
 footer{
     grid-area: footer;
-    text-align: center;
+    margin: 1.875rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*----------------------MOBILE---------------------*/
@@ -286,8 +290,8 @@ footer{
         display: grid;
         grid-template-areas:
         'aside main'
-        'footer';
-        grid-template-rows: 1fr 1rem;
+        'empty footer';
+        grid-template-rows: 1fr 40px;
         grid-template-columns: 3rem 1fr;
     }
     
@@ -296,7 +300,12 @@ footer{
         margin: 1rem;
         margin-bottom: 1.875rem;
     }
+
+    #projects-section{
+        overflow: auto;
+    }
     
+
     #projects-display{
         display: grid;
         grid-template-columns: 0.5fr 0.5fr;
@@ -308,23 +317,24 @@ footer{
     .project{
         margin: 0;
     }
+
+    #menu-icon{
+        margin: 0.75rem 0 0 0.75rem;
+        cursor: pointer;
+    }
+    
     aside{
         background-color: var(--side-bar-color);
+        position: fixed;
+        width: 3rem;
+        height: 100vh;
     }
 
-    aside div{
-        position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+    aside.toggle{
+        overflow-y: scroll;
+        width: 62vw;
+        height: 100%;
     }
-
-
 
 }
 

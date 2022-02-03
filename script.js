@@ -77,7 +77,8 @@ const Theme = {
             --text-color: #837E9F;
             --bg-cards: #302F3D;
             --bg-techs: #14B5C0;
-            --bt-bg-color: #dee4e7;;
+            --bt-bg-color: #dee4e7;
+            --side-bar-color: #223bc9;
         }
     `,
 
@@ -111,6 +112,13 @@ const Theme = {
 
 }
 
+const Sidebar = {
+    toggleSidebar() {
+        document.querySelector('#menu').classList.toggle('sr-only')
+        document.querySelector('aside').classList.toggle('toggle')
+    }
+}
+
 gitHubLogin.textContent = userNames.github;
 linkedinLogin.textContent = userNames.linkedin;
 twitterLogin.textContent = userNames.twitter;
@@ -119,11 +127,27 @@ mailLogin.textContent = userNames.email;
 GitHubApi.setUser();
 GitHubApi.setRepos();
 
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 960) {
+        document.querySelector('#menu-icon').classList.add('sr-only')
+        document.querySelector('#menu').classList.remove('sr-only')
+        document.querySelector('aside').classList.remove('toggle')
+    } else {
+        document.querySelector('#menu-icon').classList.remove('sr-only')
+        document.querySelector('#menu').classList.add('sr-only')
+    }
+});
+
 (function () {
     if (localStorage.getItem('theme') === 'dark') {
         Theme.setDarkTheme();
     } else {
         Theme.setLightTheme();
         Theme.storeTheme('light');
+    }
+
+    if (window.innerWidth < 960) {
+        document.querySelector('#menu-icon').classList.remove('sr-only')
+        document.querySelector('#menu').classList.add('sr-only')
     }
 })();
