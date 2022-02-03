@@ -3,6 +3,13 @@ const userNames = {
     linkedin: "henrique-klug",
     twitter: "KlugHenrique",
     email: 'henriqueklug@gmail.com',
+
+    setUserNames() {
+        gitHubLogin.textContent = userNames.github;
+        linkedinLogin.textContent = userNames.linkedin;
+        twitterLogin.textContent = userNames.twitter;
+        mailLogin.textContent = userNames.email;
+    }
 }
 
 const GitHubApi = {
@@ -31,18 +38,18 @@ const GitHubApi = {
                             <a href="${repos.homepage}" target="_blank">
                                 <section class="card project">
                                     <header class="project-title">
-                                        <img src="assets/dark-theme/folder.svg" alt="project icon" class="img">
+                                        <img src="assets/${localStorage.getItem('theme')}-theme/folder.svg" alt="project icon" class="img">
                                         <h4>${repos.name}</h4>
                                     </header>
                                     <p class="project-description">${repos.description}</p>
                                     <div class="gitHub-assets">
                                         <div id="gitHub-stars-forks">
                                             <div id="gitHub-stars">
-                                                <img src="assets/dark-theme/star.svg" alt="git star icon" class="img">
+                                                <img src="assets/${localStorage.getItem('theme')}-theme/star.svg" alt="git star icon" class="img">
                                                 <span>${repos.stargazers_count}</span>
                                             </div>
                                             <div id="gitHub-forks">
-                                                <img src="assets/dark-theme/git-branch.svg" alt="git branch icon" class="img">
+                                                <img src="assets/${localStorage.getItem('theme')}-theme/git-branch.svg" alt="git branch icon" class="img">
                                                 <span>${repos.forks_count}</span>
                                             </div>
                                         </div>
@@ -108,6 +115,15 @@ const Theme = {
         }
     },
 
+    setThemeSyle() {
+        if (localStorage.getItem('theme') === 'dark') {
+            Theme.setDarkTheme();
+        } else {
+            Theme.setLightTheme();
+            Theme.storeTheme('light');
+        }
+    }
+
 }
 
 const Sidebar = {
@@ -125,16 +141,31 @@ const Sidebar = {
         document.querySelector('#menu-icon').classList.add('sr-only')
         document.querySelector('#menu').classList.remove('sr-only')
         document.querySelector('aside').classList.remove('toggle')
+    },
+
+    setSidebarStyle() {
+        if (window.innerWidth < 960) {
+            Sidebar.setMobile();
+        } else {
+            Sidebar.setDesktop();
+        }
     }
 }
 
-gitHubLogin.textContent = userNames.github;
-linkedinLogin.textContent = userNames.linkedin;
-twitterLogin.textContent = userNames.twitter;
-mailLogin.textContent = userNames.email;
+function init() {
+    Theme.setThemeSyle();
 
-GitHubApi.setUser();
-GitHubApi.setRepos();
+    userNames.setUserNames();
+
+    GitHubApi.setUser();
+    GitHubApi.setRepos();
+
+
+
+    Sidebar.setSidebarStyle();
+};
+
+init();
 
 window.addEventListener('resize', () => {
     if (window.innerWidth > 960) {
@@ -143,16 +174,3 @@ window.addEventListener('resize', () => {
         Sidebar.setMobile();
     }
 });
-
-(function () {
-    if (localStorage.getItem('theme') === 'dark') {
-        Theme.setDarkTheme();
-    } else {
-        Theme.setLightTheme();
-        Theme.storeTheme('light');
-    }
-
-    if (window.innerWidth < 960) {
-        Sidebar.setMobile();
-    }
-})();
