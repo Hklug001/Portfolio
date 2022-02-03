@@ -66,19 +66,17 @@ const Theme = {
             --body-bg-color: #b0bec5;
             --text-color: black;
             --bg-cards: #dee4e7;
-            --bg-techs: #14B5C0;
             --bt-bg-color: #302F3D;
-            --side-bar-color: rgba(24, 194, 156, 1);
-         }`,
+            --assets-color: #14B5C0;
+        }`,
 
     darkTheme: `
         :root {
             --body-bg-color: #22212C;
             --text-color: #837E9F;
             --bg-cards: #302F3D;
-            --bg-techs: #14B5C0;
             --bt-bg-color: #dee4e7;
-            --side-bar-color: #223bc9;
+            --assets-color: #8257e5;
         }
     `,
 
@@ -116,6 +114,17 @@ const Sidebar = {
     toggleSidebar() {
         document.querySelector('#menu').classList.toggle('sr-only')
         document.querySelector('aside').classList.toggle('toggle')
+    },
+
+    setMobile() {
+        document.querySelector('#menu-icon').classList.remove('sr-only')
+        document.querySelector('#menu').classList.add('sr-only')
+    },
+
+    setDesktop() {
+        document.querySelector('#menu-icon').classList.add('sr-only')
+        document.querySelector('#menu').classList.remove('sr-only')
+        document.querySelector('aside').classList.remove('toggle')
     }
 }
 
@@ -129,12 +138,9 @@ GitHubApi.setRepos();
 
 window.addEventListener('resize', () => {
     if (window.innerWidth > 960) {
-        document.querySelector('#menu-icon').classList.add('sr-only')
-        document.querySelector('#menu').classList.remove('sr-only')
-        document.querySelector('aside').classList.remove('toggle')
+        Sidebar.setDesktop();
     } else {
-        document.querySelector('#menu-icon').classList.remove('sr-only')
-        document.querySelector('#menu').classList.add('sr-only')
+        Sidebar.setMobile();
     }
 });
 
@@ -147,7 +153,6 @@ window.addEventListener('resize', () => {
     }
 
     if (window.innerWidth < 960) {
-        document.querySelector('#menu-icon').classList.remove('sr-only')
-        document.querySelector('#menu').classList.add('sr-only')
+        Sidebar.setMobile();
     }
 })();
