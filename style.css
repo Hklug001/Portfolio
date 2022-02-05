@@ -296,7 +296,10 @@ footer{
     }
     
     .card{
-        margin: 1rem;
+        margin: 1.325rem;
+    }
+
+    #projects-header{
         margin-bottom: 1.875rem;
     }
     
@@ -309,6 +312,7 @@ footer{
 
     .project{
         margin: 0;
+        padding: 1.875rem
     }
 
     #menu-icon{
@@ -325,6 +329,39 @@ footer{
 
     aside.toggle{
         overflow-y: scroll;
+        width: 40vw;
+        height: 100%;
+    }
+
+    aside .card{
+        padding: 1.325rem;
+    }
+
+    #menu section:last-child{
+        margin-bottom: 1.325rem;
+    }
+
+}
+
+@media (max-width: 610px){
+
+    .card{
+        margin: 1rem;
+    }
+
+    #projects-display{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .project{
+        margin: 0;
+    }
+
+    aside.toggle{
+        overflow-y: scroll;
         width: 75vw;
         height: 100%;
     }
@@ -333,26 +370,7 @@ footer{
         padding: 1rem;
     }
 
-    #about{
-        padding: 1rem;
-    }
-
-    #experience{
-        padding: 1rem;
-    }
-
-    #education{
-        padding: 1rem;
-        margin-bottom: 1.875rem;
-    }
-
-}
-
-@media (max-width: 610px){
-    #projects-display{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-        padding: 0 1rem;
+    #menu section:last-child {
+        margin-bottom: 1rem;
     }
 }
