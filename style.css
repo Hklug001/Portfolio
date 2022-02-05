@@ -308,6 +308,7 @@ footer{
         grid-template-columns: 0.5fr 0.5fr;
         gap: 1.325rem;
         padding: 0 1.325rem;
+        grid-auto-rows: max-content;
     }
 
     .project{
@@ -333,7 +334,7 @@ footer{
         height: 100%;
     }
 
-    aside .card{
+    aside .card, #about{
         padding: 1.325rem;
     }
 
@@ -358,6 +359,7 @@ footer{
 
     .project{
         margin: 0;
+        padding: 1.325rem;
     }
 
     aside.toggle{
@@ -366,11 +368,11 @@ footer{
         height: 100%;
     }
 
-    aside .card{
+    aside .card, #about{
         padding: 1rem;
     }
 
-    #menu section:last-child {
+    #menu section:last-child{
         margin-bottom: 1rem;
     }
 }
