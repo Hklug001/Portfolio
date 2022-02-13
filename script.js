@@ -54,7 +54,7 @@ const GitHubApi = {
                                             </div>
                                         </div>
                                         <div class="project-language">
-                                            <img src="${repos.language == 'JavaScript' ? 'assets/js.svg' : `${repos.language == 'HTML' ? 'assets/html.svg' : `${repos.language == 'CSS' ? 'assets/css.svg' : `${repos.language == 'TypeScript' ? 'assets/ejs.svg' : ''}`}`}`}" alt="">
+                                            <img src="${repos.language == 'JavaScript' ? 'assets/js.svg' : `${repos.language == 'HTML' ? 'assets/html.svg' : `${repos.language == 'CSS' ? 'assets/css.svg' : `${repos.language == 'TypeScript' ? 'assets/ts.svg' : ''}`}`}`}" alt="">
                                             <p class="language">${repos.language}</p>
                                         </div>
                                     </div>
